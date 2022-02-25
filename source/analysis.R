@@ -61,13 +61,13 @@ avg_black_jail_pop_AL<-data %>%
 
 
 table1 <- full_join(avg_white_jail_pop_AL,avg_black_jail_pop_AL , by = "year")
-table1_reformed<-gather(table1,key="avg_jail_pop_AL",value = prop,-year)
+table1_reformed<-gather(table1,key="race",value = prop,-year)
 
 
 graph1<-bargraph <- ggplot(data = table1_reformed) +
   geom_bar(aes(x = year,
                y = prop,
-               fill =avg_jail_pop_AL
+               fill =race
   ),
   stat = "identity",
   position = position_dodge()) +
@@ -183,7 +183,7 @@ graph5<-data %>%
   
 graph4<-ggplot(graph5, aes(x=black_jail_pop, y=black_pop_15to64)) + 
   geom_point() +
-  labs(x="Black in Jail",y="Black Population aged 15 to 64", title = "Trends in Washington DC from 2010 to 2018")
+  labs(x="Black Population in Jail",y="Black Population aged 15 to 64", title = "Trends in Washington DC from 2010 to 2018")
 
 
 

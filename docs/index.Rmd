@@ -65,8 +65,9 @@ So if we compare the average number of black population in jail to the total num
 
 ```{r graph 1, echo=FALSE, warning=FALSE,message=FALSE}
 par(mfcol=c(3,1))
-graph1  + labs(title = "Inequality in Incarceration across various counties")
-
+graph1 + labs(title = "Inequality in Incarceration across various counties")
+graph2
+graph3
 
 ```
 
