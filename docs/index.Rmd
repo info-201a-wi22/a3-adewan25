@@ -27,7 +27,7 @@ incarceration and related measures over time for the entire United States. To ex
 - White Population 15 to 64- I have chosen this variable because this will enable us to show the total number of white people who have high probability of committing crimes and then getting imprisoned. With help of this variable, we can analyze what proportion of this population of people have been imprisoned.
 
 
-- White Jail Population- I have chosen this variable because it will enable us to make suitaible comparision between this and black jail population and latinx jail population and thus we will be able to then show ineqaulity in incarceration by race.
+- White Jail Population- I have chosen this variable because it will enable us to make suitaible comparision between this and black jail population and Latin jail population and thus we will be able to then show inequality in incarceration by race.
 
 
 ## Summary Statistics-
@@ -61,7 +61,7 @@ The 5 variables that we have chosen to dissect the datasets are the following:-
 
 So if we compare the average number of black population in jail to the total number of blacks aged between 15 to 64 (population with high probability of committing a crime) is very high with respect to that of whites and Latin population. Same is the case with latin population if compared to whites population. So with the help of this summary statistics we are able to show disproportnate number of blacks and latin in jail in comparion to whites population from 1970 to 2018 across all counties.
 
-## Graphs
+## Charts
 
 ```{r graph 1, echo=FALSE, warning=FALSE,message=FALSE}
 par(mfcol=c(3,1))
@@ -70,14 +70,14 @@ graph1  + labs(title = "Inequality in Incarceration across various counties")
 
 ```
 
-
-
-These graphs clearly demonstrates the inequality in incarceration of black race when compared to the white race. With this graph, I am trying to show that how the average number of blacks in jail (that is blacks in jail/total blacks population aged between 15 to 64) vary with the  average number of whites in jail (that is whites in jail/total whites population aged between 15 to 64) across three different counties in three different states from 2014 to 2018. The tall bars for the average number of blacks in jail indicate that more blacks have been imprisoned when compared to whites for their respective population.
+These graphs clearly demonstrate the inequality in the incarceration of the black race when compared to the white race. With this graph, I am trying to show how the average number of blacks in jail (that is, blacks in jail/total blacks population aged between 15 to 64) vary with the average number of whites in jail (that is, whites in jail/total whites population aged between 15 to 64) across three different counties in three different states from 2014 to 2018. The tall bars for the average number of blacks in jail indicate that more blacks have been imprisoned when compared to whites for their respective population.
 
 ```{r graph 2, echo=FALSE, warning=FALSE,message=FALSE}
 
 graph4
 ```
+
+This graph is intended to show the trends in blacks in jail with the black population aged between 15 to 64 in Washington DC from 2010 to 2018. I have chosen Washington state because Washington DC is the only place with the most average number of blacks in jail since 2000. And from 2010, the number of blacks in jail has only increased, so thus I have shown the trend from 2010 to 2018. This trend indicates inequality in the incarceration rate. When we look at the population of blacks in Washington DC, this trend suggests inequality as the numbers are high. I have drawn this to highlight these large numbers in front of the readers.
 
 
 ```{r maps, echo=FALSE, warning=FALSE,message=FALSE}
@@ -85,12 +85,4 @@ graph4
 map
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+The map above shows the trend of mean blacks in jail across various states in United states since 2000. Most states have mean between 100 and 200 which proves that a lot of blacks are being imprisoned considering their small proportion. The map is successful in justifying this and therefore I have chosen to draw this map.
