@@ -1,0 +1,96 @@
+---
+title: "Disproportianate Incarceration of People"
+author: "Aarav Vishesh Dewangan"
+date: "20/02/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction:-
+
+Reforms can't be established in the criminal justice system until and unless we acknowledge its racist underpinnings. We need to focus on the causes and consequences of racial disparities in order to eliminate them. So, in order to bring reforms in our criminal justice system, the first step is to understand the variation in racial and ethnic incarceration across counties in the United States, which is a significant force in driving this inequality within the system.
+The ultimate motive of this report is to show the disproportionate incarceration by race.
+We have been given a dataset which shows county-level data on prison and jail
+incarceration and related measures over time for the entire United States. To expose the patterns of inequality, I have chosen 5 variables to analyse this dataset:-
+
+- Black Population 15 to 64- I have chosen this variable because this will enable us to show the total number of black people who have high probability of committing crimes and then getting imprisoned. With help of this variable, we can analyze what proportion of this population of people have been imprisoned.
+
+- Black jail Population:- I have chosen this variable because this variable will play a big part in showing the inequality in incarceration by people. We can compare this variable to the white jail population or the total jail population and then make various comparisons among different races, which can help us prove our desired conclusion.
+
+- Latin Population 15 to 64- I have chosen this variable because this will enable us to show the total number of Latin people who have high probability of committing crimes and then getting imprisoned. With help of this variable, we can analyze what proportion of this population of people have been imprisoned.
+
+- Latin Jail Population- I have chosen this variable because it will enable us showing inequalty in incarceration of Latin people when compared to white jail population or the total jail population.
+
+- White Population 15 to 64- I have chosen this variable because this will enable us to show the total number of white people who have high probability of committing crimes and then getting imprisoned. With help of this variable, we can analyze what proportion of this population of people have been imprisoned.
+
+
+- White Jail Population- I have chosen this variable because it will enable us to make suitaible comparision between this and black jail population and latinx jail population and thus we will be able to then show ineqaulity in incarceration by race.
+
+
+## Summary Statistics-
+
+```{r summary, echo=FALSE, warning=FALSE,message=FALSE}
+options(timeout=120)
+source("../source/analysis.R")
+summary_info
+
+```
+
+The 5 variables that we have chosen to dissect the datasets are the following:-
+
+-  Black Population 15 to 64- Mean black population aged between 15 to 64 from 1970 to 2018 across all counties is 7752.66
+
+-  Black jail Population- Mean number of blacks in Jail population from 1970 to 2018 across all counties is 81.17566.
+
+- Latin Population 15 to 64-Mean latin population aged between 15 to 64 from 1970 to 2018 across all counties is 8659.194
+
+-  Latinx Jail Population-Mean number of latin in Jail population from 1970 to 2018 across all counties is 33.12703.
+
+- White Population 15 to 64- Mean white population aged between 15 to 64 from 1970 to 2018 across all counties is 41600.54
+
+-  White Jail Population- Mean number of white in Jail population from 1970 to 2018 across all counties is 90.6666.
+
+- Average Black Jail Population:- The average number of blacks in jail from the total black population aged between 15 to 64 is 0.01047067.
+
+- Average White Jail Population:- The average number of whites in jail from the total white population aged between 15 to 64 is 0.002179457.
+
+- Average Latin jail Population:- The average number of latins in jail from the total white population aged between 15 to 64 is 0.003825648.
+
+So if we compare the average number of black population in jail to the total number of blacks aged between 15 to 64 (population with high probability of committing a crime) is very high with respect to that of whites and Latin population. Same is the case with latin population if compared to whites population. So with the help of this summary statistics we are able to show disproportnate number of blacks and latin in jail in comparion to whites population from 1970 to 2018 across all counties.
+
+## Graphs
+
+```{r graph 1, echo=FALSE, warning=FALSE,message=FALSE}
+par(mfcol=c(3,1))
+graph1  + labs(title = "Inequality in Incarceration across various counties")
+
+
+```
+
+
+
+These graphs clearly demonstrates the inequality in incarceration of black race when compared to the white race. With this graph, I am trying to show that how the average number of blacks in jail (that is blacks in jail/total blacks population aged between 15 to 64) vary with the  average number of whites in jail (that is whites in jail/total whites population aged between 15 to 64) across three different counties in three different states from 2014 to 2018. The tall bars for the average number of blacks in jail indicate that more blacks have been imprisoned when compared to whites for their respective population.
+
+```{r graph 2, echo=FALSE, warning=FALSE,message=FALSE}
+
+graph4
+```
+
+
+```{r maps, echo=FALSE, warning=FALSE,message=FALSE}
+
+map
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
