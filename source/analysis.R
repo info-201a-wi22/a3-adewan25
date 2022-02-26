@@ -72,7 +72,9 @@ graph1<-bargraph <- ggplot(data = table1_reformed) +
   stat = "identity",
   position = position_dodge()) +
   theme(legend.title=element_blank()) +
-  labs(y="Proportion of Jail population in Blounty County")
+  labs(y="Proportion of Jail population in Blounty County") 
+  
+
 bargraph
 
 avg_white_jail_pop_MT <-data %>% 
@@ -176,12 +178,12 @@ map<-ggplot(state_shape) +
   labs(title="Distribution of Mean Blacks in Jail over various US states since 2000 ")
   
   
-graph5<-data %>% 
+black_pop_DC<-data %>% 
   filter(year>="2010") %>% 
   filter(state=="DC") %>% 
   select(year,black_pop_15to64,black_jail_pop)
   
-graph4<-ggplot(graph5, aes(x=black_jail_pop, y=black_pop_15to64)) + 
+graph4<-ggplot(black_pop_DC, aes(x=black_jail_pop, y=black_pop_15to64)) + 
   geom_point() +
   labs(x="Black Population in Jail",y="Black Population aged 15 to 64", title = "Trends in Washington DC from 2010 to 2018")
 
